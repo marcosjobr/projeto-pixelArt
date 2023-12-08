@@ -1,0 +1,295 @@
+/*
+Bém vindo ao meu código CSS.
+Aqui você vai ver mais um passo da minha evolção como desenvolvedor web.
+*/
+
+/*Abaixo temos algumas configurações básicas*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Pixelify+Sans:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+
+/*Abaixo temos algumas configurações padrão que vou usar pelo site*/
+:root {
+    /*fontes*/
+    --fontePixel: 'Pixelify Sans';
+    --fontePadrão: 'Space Mono';
+    --fonteFina: 'Gruppo';
+
+    /*paleta de cores*/
+    --bgMenu: rgb(73, 53, 255);
+    --bgEscuro: #0A1026;
+    --corClaro: rgb(255, 255, 255);
+    --corEscuro: rgb(26, 26, 26);
+}
+
+/*configurações gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    transition: .5s ease-in-out;
+}
+
+html {
+    background-color: var(--bgEscuro);
+}
+
+h1 {
+    font-family: var(--fontePixel);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    font-weight: normal;
+}
+
+p {
+    font-family: var(--fontePadrão);
+    padding-bottom: 1rem;
+}
+
+/*botão de menu só com CSS ×*/
+.fecharMenu {
+    position: fixed;
+    z-index: 2;
+}
+
+.fecharMenuLabel::after {
+    content: "☰";
+    font-weight: bold;
+    position: fixed;
+    z-index: 2;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.6rem 0.4rem 0.6rem;
+    border-radius: 0.1rem;
+    background-color: var(--bgMenu);
+    color: var(--corClaro);
+}
+
+.fecharMenu:checked~#navSup {
+    display: flex;
+}
+
+.fecharMenu:checked~.fecharMenuLabel::after {
+    content: "×";
+    font-family: var(--fontePixel);
+    font-size: 2rem;
+    background-color: var(--corClaro);
+    color: var(--bgMenu);
+    padding: 0 0.6rem;
+}
+
+#navSup {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bgMenu);
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    display: none;
+    position: fixed;
+    list-style: none;
+
+}
+
+#fecharMenu {
+    display: none;
+}
+
+/*configuração de aparencia do menu quando aberto*/
+#logoP {
+    max-height: 5rem;
+    padding-bottom: 2.5rem;
+}
+
+#navSup li {
+    padding-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--corClaro);
+    font-family: var(--fontePixel);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*inicio*/
+#inicio {
+    height: 100vh;
+    background: var(--bgEscuro) url(../img/bgPixelArt.jpg) center bottom / cover scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#txtInicio {
+    font-size: 3rem;
+    color: var(--corClaro);
+    font-family: var(--fontePixel);
+    text-align: center;
+    max-width: 80%;
+    padding-bottom: 3rem;
+}
+
+#botaoInicio {
+    font-family: var(--fontePixel);
+    font-weight: normal;
+    font-size: 1.2rem;
+    background-color: var(--corClaro);
+    color: var(--corEscuro);
+    padding: 0.5rem 0.7rem;
+    text-decoration: none;
+}
+
+#oquee {
+    display: grid;
+    height: 100vh;
+    background-color: var(--bgEscuro);
+    padding: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+#oquee h1 {
+    color: var(--corClaro);
+}
+
+#oquee p {
+    color: var(--corClaro);
+}
+
+#oquee img {
+    max-width: 100%;
+    max-height: 100%;
+    border: solid var(--corClaro) 0.3rem;
+    border-radius: 5%;
+}
+
+#oquee .gridOqe {
+    width: 90%;
+    text-align: center;
+}
+
+#oquee .gridOqeImg {
+    width: 80%;
+}
+
+#transicao {
+    height: 11rem;
+    background-color: white;
+}
+
+#transicaoEC {
+    height: 10rem;
+    background: url(../img/transicao.svg) center -30px / contain repeat-x;
+}
+
+#historia {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background-color: var(--corClaro);
+    padding: 2rem;
+}
+
+#historia h1 {
+    color: var(--corEscuro);
+}
+
+#historia p {
+    color: var(--corEscuro);
+    font-weight: bold;
+}
+
+#artes {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--corClaro);
+    color: var(--corEscuro);
+}
+
+.gridArtes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+#artes h1 {
+    color: var(--corEscuro);
+}
+
+#artes p {
+    color: var(--corEscuro);
+    padding-bottom: 2rem;
+}
+
+#artes img {
+    max-width: 100%;
+    max-height: 100%;
+    border: solid var(--corEscuro) 0.3rem;
+    border-radius: 5%;
+}
+
+#contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--corClaro);
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+#contato h1 {
+    color: var(--corClaro);
+}
+
+#formulario {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.itemFormulario {
+    flex: 3 1 335px;
+}
+
+.itemFormulario input:hover,
+.itemFormulario textarea:hover {
+    border-radius: .8rem;
+    transition: .5s;
+}
+
+.itemFormulario label {
+    display: block;
+}
+
+.itemFormulario input,
+.itemFormulario textarea {
+    border: none;
+    background-color: var(--corClaro);
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: .5s;
+}
+
+.enviar {
+    background-color: var(--corClaro);
+    padding: .5rem 2rem;
+    width: 100%;
+    font-family: var(--fontePixel);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+}

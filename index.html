@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleTabletDesktop.css">
+    <title>PixelArt</title>
+</head>
+
+<body>
+
+    <input id="fecharMenu" class="fecharMenu" type="checkbox" aria-label="fechar menu" role="button">
+    <label class="fecharMenuLabel" for="fecharMenu" title="fecharMenu"></label>
+
+    <nav id="navSup">
+        <img id="logoP" src="../assets/img/pocao.svg" alt="">
+        <ul id="menu" onclick="getElementById('fecharMenu').checked=false;">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#oquee">O que é</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#artes">Artes</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h1 id="txtInicio">Você sabe o que é pixel art?</h1>
+        <a id="botaoInicio" href="#oquee">Começar!</a>
+    </section>
+
+    <section id="oquee">
+        <div class="gridOqe">
+            <h1>Pixel art?</h1>
+            <p>A pixel art é uma técnica de criação de imagens digitais em que cada pixel é colocado individualmente,
+            formando uma composição geral.<br>
+            Os pixels são pequenos blocos de cor que, quando combinados, dão origem a imagens detalhadas e muitas
+            vezes minimalistas.</p>
+        </div>
+        <img class="gridOqeImg" src="../assets/img/fazenda.jpeg"
+            alt="um cavaleiro em pixel art saindo do monitor de tubo, enquanto ele sai ele vai ficando mais relista">
+    </section>
+
+    <div id="transicao">
+        <div id="transicaoEC">
+
+        </div>
+    </div>
+
+    <section id="historia">
+        <div>
+            <h1>História</h1>
+            <p>A história da Pixel Art remonta aos primeiros videogames. Devido às limitações técnicas das máquinas da
+                época, os desenvolvedores precisavam criar gráficos que ocupassem o menor espaço possível na memória do
+                sistema. Foi assim que nasceram os icônicos personagens e cenários pixelizados de jogos como Super Mario
+                Bros, Pac-Man e The Legend of Zelda.</p>
+            <p>Com o avanço da tecnologia, os gráficos dos jogos evoluíram para gráficos 3D e resoluções mais altas, mas
+                a Pixel Art não desapareceu. Pelo contrário, ganhou um lugar especial como uma forma de expressão
+                artística única, sendo usada em jogos independentes, animações, arte digital e até mesmo como um estilo
+                estético em logotipos e designs contemporâneos.</p>
+        </div>
+    </section>
+
+    <section id="artes">
+        <h1>Artes</h1>
+        <p>Veja alguns exemplos de artes diversas feitas em pixel art.</p>
+
+        <div class="gridArtes">
+
+            <div class="imgExemplo">
+                <img src="../assets/img/artes/matrix.jpeg" alt="pixel arte de cidade estilo matrix">
+            </div>
+            <div class="imgExemplo">
+                <img src="../assets/img/artes/cavaleirodragao.jpeg" alt="pixel arte de cidade estilo matrix">
+            </div>
+            <div class="imgExemplo">
+                <img src="../assets/img/artes/cidadecyberpunk.jpeg" alt="pixel arte de cidade estilo matrix">
+            </div>
+            <div class="imgExemplo">
+                <img src="../assets/img/artes/paisagem.jpeg" alt="pixel arte de cidade estilo matrix">
+            </div>
+            <div class="imgExemplo">
+                <img src="../assets/img/artes/vacaespacial.jpeg" alt="pixel arte de cidade estilo matrix">
+            </div>
+            <div class="imgExemplo">
+                <img src="../assets/img/artes/monitor.jpeg" alt="pixel arte de cidade estilo matrix">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div>
+            <h1>Contato</h1>
+            <p>Se você gostou do site ou tem alguma crítica, entre em contato e nos dê seu feedback!</p>
+            <fieldset id="formulario">
+                <div class="itemFormulario">
+                    <p><label for="primeiroNome">Primeiro nome</label></p>
+                    <input type="text" name="primeiroNome" id="primeiroNome">
+                </div>
+                <div class="itemFormulario">
+                    <p><label for="sobrenome">Sobrenome</label></p>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                </div>
+                <div class="itemFormulario larguraCheia">
+                    <p><label for="email">E-mail</label></p>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="itemFormulario larguraCheia">
+                    <p><label for="mansagem">Mensagem</label></p>
+                    <textarea name="mansagem" id="mansagem" cols="30" rows="10"></textarea>
+                </div>
+                <div class="itemFormulario">
+                    <button class="enviar" type="submit">Enviar</button>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+</body>
+
+</html>
